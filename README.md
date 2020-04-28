@@ -10,5 +10,6 @@ One script to rule them all, one script to find them, One script to bring them a
 
 ## Usage
 
+- Basic usage for single scripts: `bash <(curl -ks URL_OF_RAW);`
 - These are made to work modularly inside of larger scripts
 - They are broken up to make tweaking and updating much easier than a single monolith script
