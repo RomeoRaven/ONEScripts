@@ -1,4 +1,4 @@
-#!/bin/bsh
+#!/bin/bash
 
 ## Color Test scRsipt
 
