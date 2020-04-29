@@ -1,0 +1,70 @@
+#!/bin/bash
+
+## v1.0
+## OS: CentOS6+
+## Author: RomeoRaven
+## Checks: Disk space for all mounts, Disk Inodes
+
+RS="\e[0;00m";		    #RESET;
+H1="\e[1m \e[34m";		#BOLD and BLUE;
+H2="\e[1m \e[97m";		#BOLD and WHITE;
+
+echo -e "\n${H1}===========${H2} Disk Space ${H1}===========${RS}";
+
+df -PTh | head -1;
+for (( i=2 ; i < `df -PTh | wc -l` +1; i++ )); do
+#Check for virtfs mounts
+virtflag=$(df -PTh | awk 'NR == '$i'' | grep -v virtfs);
+
+  if [[ -n $virtflag  ]]; then
+  perc=$(df -PTh | awk 'NR == '$i' {print $6}' | cut -d '%' -f1);
+  
+  	#Output in Green if under 90% 
+  	if [[ $perc -lt 90 ]]; then
+  		export GREP_COLOR='1;32'
+  		df -PTh | awk 'NR == '$i'' | egrep -i --color=auto [a-z?0-9]+%
+  		export GREP_COLOR='01;31'
+
+  	else
+  		#Output in Yellow if between 90-94
+  		if [[ $perc -lt 95 ]]; then
+  			export GREP_COLOR='1;33'
+  			df -PTh | awk 'NR == '$i'' | egrep -i --color=auto [a-z?0-9]+%
+  			export GREP_COLOR='01;31'
+  		else
+  			#Output in RED
+  			df -PTh | awk 'NR == '$i'' | egrep -i --color=auto [a-z?0-9]+%
+  		fi
+  	fi
+	fi
+done;
+
+echo -e "\n${H1}===========${H2} Disk Inodes ${H1}===========${RS}";
+
+df -PTi | head -1;
+for (( i=2 ; i < `df -PTi | wc -l` +1; i++ )); do
+virtflag=$(df -PTi | awk 'NR == '$i'' | grep -v virtfs);
+
+  if [[ -n $virtflag  ]]; then
+	perc=$(df -PTi | awk 'NR == '$i' {print $6}' | cut -d '%' -f1);
+	if [[ $perc = \- ]]; then perc=0; fi;
+  
+  	#Output in Green if under 90% 
+  	if [[ $perc -lt 90 ]]; then
+  		export GREP_COLOR='1;32'
+  		df -PTi | awk 'NR == '$i'' | egrep -i --color=auto "[\-]|[a-z?0-9]+%"
+  		export GREP_COLOR='01;31'
+
+  	else
+  		#Output in Yellow if between 90-94%
+  		if [[ $perc -lt 95 ]]; then
+  			export GREP_COLOR='1;33'
+  			df -PTi | awk 'NR == '$i'' | egrep -i --color=auto [a-z?0-9]+%
+  			export GREP_COLOR='01;31'
+  		else
+  			#Output in RED
+  			df -PTi | awk 'NR == '$i'' | egrep -i --color=auto [a-z?0-9]+%
+  		fi
+  	fi
+	fi
+done;
