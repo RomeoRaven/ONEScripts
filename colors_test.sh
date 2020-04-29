@@ -7,7 +7,7 @@ source <(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master
 # default: echo -e "${cG}THING${cRs}"
 
 # Reset from any previous scripts or colors
-echo -e "${RESET}"
+echo -e "$RESET"
 echo -e "  Colors |   ${fB}Color Bold${fR}  |  ${fU}Color Underline${fR}   |   ${fH}Color Blink${fR}   |    ${fS}Color Shade${fR}"
 echo -e " Default | ${fB} Default Bold${fR} | ${fU}Default Underline${fR}  | ${fBl} Default Blink${fR}  | ${fS} Default Shade${fR} "
 echo -e "${cN} Black   | ${cN}${fB} Black Bold${fR}   | ${cN}${fU}Black Underline${cRs}${fR}    | ${cN}${fBl} Black Blink${cRs}${fR}    | ${cN}${fS} Black Shade${cRs}${fR} "
