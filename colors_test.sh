@@ -3,7 +3,7 @@
 ## Color Test scRsipt
 
 #Pull color code scrsipt
-source <(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScrsipts/master/colors.sh);
+source <(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/colors.sh);
 # default: echo -e "${cG}THING${cRs}"
 
 echo ""
