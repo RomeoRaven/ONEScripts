@@ -22,7 +22,7 @@ HIGHLIGHT="\e[3m"; ## Doesn't work?
 UNDERLINE="\e[4m";
 BLINK="\e[5m";
 SHADE="\e[7m";
-INVERT=${SHADE}";
+INVERT=${SHADE};
 
 ### Symbols
 GCHMK="\e[32m\xE2\x9C\x94"; # Green Checkmark
