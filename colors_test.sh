@@ -6,8 +6,9 @@
 source <(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/colors.sh);
 # default: echo -e "${cG}THING${cRs}"
 
-echo ""
-echo -e "  Colors  |  ${fB}Color Bold${fR}  |  ${fU}Color Underline${fR}   |   ${fH}Color Blink${fR}   |    ${fS}Color Shade${fR}   |"
+# Reset from any previous scripts or colors
+echo "${RESET}"
+echo -e "  Colors |   ${fB}Color Bold${fR}  |  ${fU}Color Underline${fR}   |   ${fH}Color Blink${fR}   |    ${fS}Color Shade${fR}"
 echo -e " Default | ${fB} Default Bold${fR} | ${fU}Default Underline${fR}  | ${fBl} Default Blink${fR}  | ${fS} Default Shade${fR} "
 echo -e "${cN} Black   | ${cN}${fB} Black Bold${fR}   | ${cN}${fU}Black Underline${cRs}${fR}    | ${cN}${fBl} Black Blink${cRs}${fR}    | ${cN}${fS} Black Shade${cRs}${fR} "
 echo -e "${cR} Red     | ${cR}${fB} Red Bold${fR}     | ${cR}${fU}Red Underline${cRs}${fR}      | ${cR}${fBl} Red Blink${cRs}${fR}      | ${cR}${fS} Red Shade${cRs}${fR} "
@@ -19,7 +20,7 @@ echo -e "${cP} Purple  | ${cP}${fB} Purple Bold${fR}  | ${cP}${fU}Purple Underli
 echo -e "${cC} Cyan    | ${cC}${fB} Cyan Bold${fR}    | ${cC}${fU}Cyan Underline${cRs}${fR}     | ${cC}${fBl} Cyan Blink${cRs}${fR}     | ${cC}${fS} Cyan Shade${cRs}${fR} "
 
 echo ""
-echo -e " Bright = Bold"
+echo -e " Bright Colors"
 echo -e "${bN} Bright Black ${cRs}"
 echo -e "${bR} Bright Red ${cRs}"
 echo -e "${bG} Bright Green${cRs}"
