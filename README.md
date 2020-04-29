@@ -14,10 +14,11 @@ One script to rule them all, one script to find them, One script to bring them a
 - Each script made to work individually or in combination to make larger scripts
 
 ## Current Scripts
-- colors.sh = Add all the 8-bit color codes to be able to use color in other scripts via variables
-- colors_test.sh = Script to show output of the colors.sh script
-- basic-info.sh = init, will gather basic info like OS, Hostname, Ip, Mem, Disk info, etc
-- df-disk-check.sh = Shows disk space usage, mounts, file systems and inodes
+- **colors.sh** = Add all the 8-bit color codes to be able to use color in other scripts via variables
+- **colors_test.sh** = Script to show output of the colors.sh script
+- **basic-info.sh** = init, will gather basic info like OS, Hostname, Ip, Mem, Disk info, etc
+- **df-disk-check.sh** = Shows disk space usage, mounts, file systems and inodes
+- **apache-check.sh** = init commit for adding all the apache checks later
 
 ## Usage
 
