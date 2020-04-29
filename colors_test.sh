@@ -30,4 +30,4 @@ echo -e "${bP} Bright Purple${cRs}"
 echo -e "${bC} Bright Cyan${cRs}"
 
 echo -e "\n Symbols"
-echo -e "${GCK} Green Check Mark"
+echo -e " ${GCK} Green Check Mark${cRs}"
