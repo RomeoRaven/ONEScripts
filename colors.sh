@@ -4,7 +4,7 @@
 # Color Code Script for Modular Scripting                      #
 # Author: RomeoRaven                                           #
 # Credit: Bill M., Gabe N., Kevin B., Adam B.                  #
-# Version 1.0                                                  #
+# Version 1.1                                                  #
 # References:                                                  #
 # - https://misc.flogisoft.com/bash/tip_colors_and_formatting  #
 # ************************************************************ #
@@ -43,6 +43,9 @@ PURPLE=$MAGENTA;        # Alias for MAGENTA
 CYAN="\e[36m";
 GREY="\e[37m";
 GRAY=$GREY;
+DARKGRAY="\e[90m"       # Same as Bright Black
+DARKGREY="$DARKGRAY"    # Same as Bright Black
+DEFAULT="\e[39m";       # Whatever the user has set for their default (usually white/gray)
 
 ### Colors (Bright)
 BBLACK="\e[90m";
@@ -59,10 +62,6 @@ BGREY="\e[97m";
 BGRAY=$BGREY;
 WHITE=$BGREY;           # [WHITE] Alias for BGREY
 
-### Dark Colors
-DARKGREY="\e[1;30m";
-DARKGRAY=$DARKGREY;
-
 ############### Short Codes ###############
 # Short Standard Formatting
 # Credit: Gabe N
@@ -76,18 +75,23 @@ fS=$SHADE;              # Alias for SHADE
 fI=$INVERT;             # Alias for INVERT
 
 # Short Colors (Basic)
-cR=$RESET;              # Alias for RESET
+cRs=$RESET;             # Alias for RESET
+cD=$DEFAULT;             # Alias for DEFAULT 
 cN=$BLACK;              # Alias for BLACK (null/no color)
+cR=$RED;                # Alias for RED
 cG=$GREEN;              # Alias for GREEN
 cY=$YELLOW;             # Alias for HIGHLIGHT
 cB=$BLUE;               # Alias for BLUE
 cM=$MAGENTA;            # Alias for MAGENTA
-cP=$PURPLE;             # Alias for PURPLE
+cP=$PURPLE;             # Alias for PURPLE (same as Magenta)
 cC=$CYAN;               # Alias for CYAN
+cGl=$GRAY;              # Alias for GRAY/GREY
+cGd=$DARKGRAY;          # Alias for DARKGRAY/GREY
 
 # Short Colors (Bright)
-bR=$RESET;              # Alias for BRESET
+bRs=$RESET;             # Alias for BRESET
 bN=$BBLACK;             # Alias for BBLACK (null/no color)
+bR=$BRED;               # Alias for BRED / PINK
 bG=$BGREEN;             # Alias for BGREEN
 bY=$BYELLOW;            # Alias for BHIGHLIGHT
 bB=$BBLUE;              # Alias for BBLUE
@@ -95,7 +99,7 @@ bM=$BMAGENTA;           # Alias for BMAGENTA
 bP=$BPURPLE;            # Alias for BPURPLE
 bC=$BCYAN;              # Alias for BCYAN
 
-# Short Legacy Colors
+# Short Legacy Colors and Combos
 BD="\e[1m";             # BOLD
 RS="\e[0;00m";          # RESET
 H1="\e[1m\e[34m";       # BOLD and BLUE
