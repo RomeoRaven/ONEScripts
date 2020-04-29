@@ -3,7 +3,8 @@
 ## Color Test script
 
 #Pull color code script
-eval "$(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/colors.sh)";
+#eval "$(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/colors.sh)";
+bash "$(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/colors.sh)";
 # default: echo -e "${cG}THING${cR}"
 
 echo -e "Colors | ${fB}Color Bold${fR} | ${fU}Color Underline${fR} | ${fH}Color Blink${fR} | ${fS}Color Shade${fR} |"
