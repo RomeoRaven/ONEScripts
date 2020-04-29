@@ -52,11 +52,10 @@ BGREEN="\e[92m";
 MINT=$BGREEN;           # [MINT] Alias for BGREEN
 BYELLOW="\e[93m";
 BBLUE="\e[94m";
-BGREEN="\e[95m";
-BMAGENTA="\e[96m";
+BMAGENTA="\e[95m";
 BPURPLE=$BMAGENTA;      # Alias for BMAGENTA
 BCYAN="\e[96m";
-BGREY="\e[96m";
+BGREY="\e[97m";
 BGRAY=$BGREY;
 WHITE=$BGREY;           # [WHITE] Alias for BGREY
 
