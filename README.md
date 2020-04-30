@@ -19,6 +19,9 @@ One script to rule them all, one script to find them, One script to bring them a
 - **basic-info.sh** = init, will gather basic info like OS, Hostname, Ip, Mem, Disk info, etc
 - **df-disk-check.sh** = Shows disk space usage, mounts, file systems and inodes
 - **apache-check.sh** = init commit for adding all the apache checks later
+- **os-check.sh** = Checks what OS and version you are in
+- **gcloud-init.sh** = Google Cloud (micro-vm) setup script for basic things needed
+- **silent-checks.sh** = Script meant to embed in larger scripts to check for various things such as read-only filesystems or bad stuff before letting a script run
 
 ## Usage
 
