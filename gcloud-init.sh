@@ -20,9 +20,8 @@ select answer in "More details" "VM Info" "Apache" "Nano" "Index.html" "Index.ht
                         ;;
         Nano )          echo "Yum installing nano";;
         Index.html )    if [ -f /var/www/html/index.html ]; then echo "Index.html already exists, do you want to overwrite it? If so select the 'Index.html -o' option";
-                        if [ ! -f /var/www/html/index.html ]; then echo "Hello World" > /var/www/html/index.html; fi;
-                        ;;
-        Index.html -o ) echo "Hello World" > /var/www/html/index.html; fi;;;
+                        if [ ! -f /var/www/html/index.html ]; then echo "Hello World" > /var/www/html/index.html; fi;;;
+        "Index.html -o" ) echo "Hello World" > /var/www/html/index.html; fi;;;
         Everything )    echo "Running fix everything";;
         Exit )          exit;;
     esac
