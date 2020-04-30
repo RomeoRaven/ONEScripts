@@ -8,7 +8,7 @@ echo -e "NOTE: If this is a brand new CentOS VM run: Everything \n"
 echo "Which option do you want?"
 select answer in "More details" "VM Info" "Apache" "Nano" "Index.html" "Index.html -o" "Everything" "Exit"; do
     case $answer in
-        "More details" ) echo "Will curl this script to read";;
+        "More details" ) curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/dev/gcloud-init.sh;;
         "VM Info" )     echo "RUN: bash <(curl -ks https://raw.githubusercontent.com/RomeoRaven/ONEScripts/master/basic-info.sh)"; exit;;
         Apache )        if [ -d /etc/httpd/ ]; then echo "Looks like Apache already installed"; fi;
                         if [ ! -d /etc/httpd/ ]; then echo "Apache installing"; fi;
